@@ -173,10 +173,10 @@
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" linkTimeOptimisation="0"
                        targetName="Camomile" libraryPath="../../../Dependencies/LibPdBuild"
-                       binaryPath="../Plugins"/>
+                       binaryPath="../Plugins" linuxArchitecture="-march=native"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="Camomile"
                        libraryPath="../../../Dependencies/LibPdBuild" binaryPath="../Plugins"
-                       linkTimeOptimisation="0"/>
+                       linkTimeOptimisation="0" linuxArchitecture="-march=native"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../Juce/modules"/>

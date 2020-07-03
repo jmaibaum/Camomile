@@ -32,7 +32,7 @@ ifeq ($(CONFIG),Debug)
   JUCE_OUTDIR := ../../../Plugins
 
   ifeq ($(TARGET_ARCH),)
-    TARGET_ARCH := 
+    TARGET_ARCH := -march=native
   endif
 
   JUCE_CPPFLAGS := $(DEPFLAGS) -DLINUX=1 -DDEBUG=1 -D_DEBUG=1 -DPD_INTERNAL=1 -DJUCE_VST3_CAN_REPLACE_VST2=0 -DHAVE_UNISTD_H=1 -DJUCER_LINUX_MAKE_6D53C8B4=1 -DJUCE_APP_VERSION=1.0.6 -DJUCE_APP_VERSION_HEX=0x10006 $(shell pkg-config --cflags x11 xinerama xext freetype2) -pthread -I../../JuceLibraryCode -I../../../Juce/modules -I../../../Dependencies/LibPd/pure-data/src -I../../../Dependencies/LibPd/libpd_wrapper -I../../../Dependencies/LibPd/libpd_wrapper/util -I../../../Dependencies/LibPd/cpp $(CPPFLAGS)
@@ -54,7 +54,7 @@ ifeq ($(CONFIG),Release)
   JUCE_OUTDIR := ../../../Plugins
 
   ifeq ($(TARGET_ARCH),)
-    TARGET_ARCH := 
+    TARGET_ARCH := -march=native
   endif
 
   JUCE_CPPFLAGS := $(DEPFLAGS) -DLINUX=1 -DNDEBUG=1 -DPD_INTERNAL=1 -DJUCE_VST3_CAN_REPLACE_VST2=0 -DHAVE_UNISTD_H=1 -DJUCER_LINUX_MAKE_6D53C8B4=1 -DJUCE_APP_VERSION=1.0.6 -DJUCE_APP_VERSION_HEX=0x10006 $(shell pkg-config --cflags x11 xinerama xext freetype2) -pthread -I../../JuceLibraryCode -I../../../Juce/modules -I../../../Dependencies/LibPd/pure-data/src -I../../../Dependencies/LibPd/libpd_wrapper -I../../../Dependencies/LibPd/libpd_wrapper/util -I../../../Dependencies/LibPd/cpp $(CPPFLAGS)
